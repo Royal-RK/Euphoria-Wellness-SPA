@@ -17,7 +17,7 @@ menuBtn.addEventListener("click", () => {
   }
 });
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".bnrSwiper", {
   loop: true,
   autoplay: {
     delay: 3000,
@@ -27,5 +27,44 @@ let swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+let newSwiper = new Swiper(".glrySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      // spaceBetween: 10,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+});
+
+let testiSwiper = new Swiper(".testiSwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next .testi-next-btn",
+    prevEl: ".swiper-button-prev .testi-prev-btn",
   },
 });
