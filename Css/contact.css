@@ -39,9 +39,6 @@ a {
 ul {
   list-style-type: none;
 }
-.title-1 {
-  font-size: 70px;
-}
 .title-2 {
   font-size: 50px;
   font-family: var(--font-Marcellus);
@@ -298,37 +295,39 @@ div.modal-content.cart {
   justify-content: center;
   min-height: calc(100vh - 164.57px) !important;
   padding: 290px 0 100px !important;
-  background: url("../Assets/contact-bnr-bg.png") no-repeat center/cover;
+  background: url("../Assets/about-bnr-bg.png") no-repeat center/cover;
 }
-.bnr-cnt .common-img {
-  max-width: 172px;
-  margin: 0 auto;
+.bnr-cnt .sub-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: var(--font-Manrope);
+  font-weight: 700;
+  color: var(--primary-color);
+  /* margin-bottom: 20px; */
 }
-.bnr-cnt .common-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.bnr-cnt h1 {
+.bnr-cnt h2 {
   max-width: 928px;
   color: var(--secondary-color);
   font-family: var(--font-Marcellus);
-  margin: 10px auto;
+  margin: 20px auto;
+  text-align: center;
   text-transform: capitalize;
 }
 .bnr-cnt p {
-  /* max-width: 749px; */
-  font-size: 30px;
+  max-width: 846px;
+  font-size: 20px;
   font-family: var(--font-Manrope);
   line-height: calc(32 / 20) !important;
   color: var(--secondary-color);
   text-transform: capitalize;
-  margin-bottom: 20px;
+  margin-bottom: 40px !important;
 }
 .bnr-btn {
-  justify-content: center !important;
-  margin: 0 auto !important;
-  text-align: center !important;
+  display: flex;
+  justify-content: center;
+}
+.bnr-btn .breadcrumb {
+  justify-content: center;
 }
 .bnr-btn .breadcrumb-item a {
   color: rgba(255, 255, 255, 80%);
@@ -338,6 +337,139 @@ div.modal-content.cart {
 }
 .bnr-btn .breadcrumb-item.active a {
   color: #f68272;
+}
+/*------------------ Contact --------------------*/
+.cont-sec {
+  padding: 100px 0;
+}
+.cont-sec .cont-cnt {
+  margin-bottom: 50px;
+}
+.cont-card {
+  text-align: center;
+  padding: 70px 40px;
+  background: var(--glry-sec-color);
+  box-shadow: var(--commin-shadow);
+}
+.cont-card .title {
+  font-size: 24px;
+  font-family: var(--font-Manrope);
+  font-weight: 500;
+  letter-spacing: 2.4px;
+  margin: 10px auto;
+}
+.cont-card p {
+  font-size: 20px;
+  font-family: var(--font-Manrope);
+  letter-spacing: 2px;
+}
+/*--------------- Get -------------*/
+.get-sec {
+  padding: 100px 0;
+}
+.get-row {
+  align-items: center;
+  max-width: 1350px;
+  margin: 0 auto 73px;
+  --bs-gutter-x: 40px;
+}
+.get-img {
+  max-width: 556px;
+}
+.get-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.form-top-cnt {
+  margin-bottom: 34px;
+}
+.get-form {
+  padding: 50px 40px;
+  background: var(--secondary-color);
+}
+.get-form .get-left-cnt {
+  font-size: 30px;
+  font-family: var(--font-Marcellus);
+  letter-spacing: 3px;
+  color: var(--primary-color);
+  margin-bottom: 35px;
+}
+.get-form {
+  border-radius: 20px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 5%);
+}
+.get-form .form-row {
+  margin-bottom: 30px;
+  --bs-gutter-x: 15px;
+}
+.get-form form .form-row .group-1 label,
+.get-form form .form-row .group-2 label,
+.get-form form .form-row .group-3 label,
+.get-form form .form-row .group-4 label,
+.get-form form .form-row .group-5 label {
+  font-size: 18px;
+  font-family: var(--font-Manrope);
+  letter-spacing: 1.8px;
+  margin-bottom: 5px;
+}
+.get-form form .form-row .group-1 input,
+.get-form form .form-row .group-2 input,
+.get-form form .form-row .group-3 input,
+.get-form form .form-row .group-4 input {
+  padding: 17px 10px;
+  max-width: 258px;
+  width: 100%;
+  border: 1.5px solid rgba(0, 0, 0, 10%);
+  font-size: 16px;
+  font-family: var(--font-Manrope);
+  letter-spacing: 1.6px;
+  color: var(--text-color);
+  transition: 0.5s linear;
+}
+.get-form form .form-row .group-5 textarea {
+  padding: 10px 10px 60px;
+  max-width: 557px;
+  width: 100%;
+  border: 1.5px solid rgba(0, 0, 0, 10%);
+  font-size: 16px;
+  font-family: var(--font-Manrope);
+  letter-spacing: 1.8px;
+  color: var(--text-color);
+  transition: 0.5s linear;
+}
+.get-form form .form-row .group-1,
+.get-form form .form-row .group-2,
+.get-form form .form-row .group-3,
+.get-form form .form-row .group-4 {
+  margin-bottom: 20px;
+}
+.get-form form .form-row .group-1 input:hover,
+.get-form form .form-row .group-2 input:hover,
+.get-form form .form-row .group-3 input:hover,
+.get-form form .form-row .group-4 input:hover,
+.get-form form .form-row .group-5 textarea:hover {
+  transform: scaleX(1.03);
+}
+.get-form form .sub-btn {
+  padding: 15px 25px !important;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  font-family: var(--font-Manrope);
+  letter-spacing: 1.8px;
+  padding: 9px 20px;
+  background-color: var(--primary-color);
+  font-family: var(--font-Manrope);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  transition: 0.5s linear;
+  border: none;
+}
+.get-form .sub-btn:hover {
+  color: var(--top-nav-color);
+  background: #f68272;
 }
 /*--------------- Footer ---------------*/
 .foot-sec {
@@ -580,11 +712,6 @@ div.modal-content.cart {
   .offcanvas {
     width: 80% !important;
   }
-  /*----------------Banner-----------*/
-  .mySwiper .swiper-pagination {
-    display: none;
-  }
-  /*------------------ Else ---------------*/
 }
 @media screen and (max-width: 418px) {
 }

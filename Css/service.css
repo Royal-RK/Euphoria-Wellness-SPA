@@ -334,9 +334,11 @@ div.modal-content.cart {
   margin-bottom: 20px;
 }
 .bnr-btn {
-  justify-content: center !important;
-  margin: 0 auto !important;
-  text-align: center !important;
+  display: flex;
+  justify-content: center;
+}
+.bnr-btn .breadcrumb {
+  justify-content: center;
 }
 .bnr-btn .breadcrumb-item a {
   color: rgba(255, 255, 255, 80%);
@@ -387,6 +389,12 @@ div.modal-content.cart {
   margin: 0 auto;
   --bs-gutter-x: 30px;
   row-gap: 30px;
+}
+.serv-img {
+  transition: 0.5s linear;
+}
+.serv-img:hover {
+  transform: scale(1.02);
 }
 .serv-sec .serv-row .img-1,
 .serv-sec .serv-row .img-2,
@@ -512,6 +520,12 @@ div.modal-content.cart {
 .thrpy-sec .text-card {
   padding: 10px;
   text-align: center;
+}
+.thrpy-card {
+  transition: 0.5s linear;
+}
+.thrpy-card:hover {
+  transform: scale(1.02);
 }
 .thrpy-sec .thrpy-card.text-card .title {
   font-size: 24px;
