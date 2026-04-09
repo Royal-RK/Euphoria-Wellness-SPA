@@ -41,7 +41,7 @@ let newSwiper = new Swiper(".glrySwiper", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      // spaceBetween: 10,
+      spaceBetween: 0,
     },
     576: {
       slidesPerView: 2,
@@ -63,8 +63,9 @@ let newSwiper = new Swiper(".glrySwiper", {
 });
 
 let testiSwiper = new Swiper(".testiSwiper", {
+  loop:true,
   navigation: {
-    nextEl: ".swiper-button-next .testi-next-btn",
-    prevEl: ".swiper-button-prev .testi-prev-btn",
+    nextEl: ".testi-next-btn",
+    prevEl: ".testi-prev-btn",
   },
 });

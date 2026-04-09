@@ -1127,6 +1127,18 @@ div.modal-content.cart {
   color: var(--text-color);
   margin-bottom: 20px;
 }
+/* .testiSwiper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+} */
+.testiSwiper {
+  position: relative;
+}
+/* .testiSwiper .card-btn {
+  position: absolute;
+  bottom: -50px;
+} */
 .testi-card {
   padding: 20px;
   border: 1px solid var(--text-color);
@@ -1850,6 +1862,10 @@ div.modal-content.cart {
   .time-box-row div .time-card::after {
     display: none;
   }
+  .time-card {
+    margin: 0 auto;
+    text-align: center;
+  }
   .btm-card {
     position: relative !important;
     margin-top: 20px;
@@ -1928,6 +1944,24 @@ div.modal-content.cart {
   }
   .membership-card.first-card::after {
     width: 229px !important;
+  }
+  /*------------------- Testimonial --------------*/
+  .testi-sec .testi-form .form-group {
+    display: flex;
+    align-items: center;
+  }
+  .testi-sec .testi-form .common-title {
+    justify-content: center;
+  }
+  .testi-form .form-group {
+    text-align: center;
+    /* margin: 20px auto 0; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .testi-form .form-group label {
+    margin-right: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2054,6 +2088,24 @@ div.modal-content.cart {
     font-size: 18px;
     padding-top: 5px;
   }
+  /*---------- Gallery ------*/
+  .glry-cards-slider {
+    top: 0;
+  }
+  .glry-cards-slider .glry-card {
+    /* max-width: 334px; */
+    max-width: 542px;
+    border: 1px solid red;
+    width: 100%;
+    /* padding: 0 10px; */
+    margin: 0 auto;
+  }
+  .glry-card img {
+    width: 100%;
+  }
+  .glry-cards-slider .swiper-slide {
+    margin-right: 0 !important;
+  }
 }
 @media screen and (max-width: 418px) {
   .else-vid .play-btn {
@@ -2064,5 +2116,10 @@ div.modal-content.cart {
   /*----------- Price -----------*/
   .membership-card.first-card::after {
     display: none;
+  }
+  /*---------------- Testimonial ----------*/
+  .testi-form .form-group.group-4 input {
+    font-size: 10px;
+    letter-spacing: 0 !important;
   }
 }
