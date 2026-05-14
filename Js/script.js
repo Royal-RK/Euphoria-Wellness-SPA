@@ -63,7 +63,10 @@ let newSwiper = new Swiper(".glrySwiper", {
 });
 
 let testiSwiper = new Swiper(".testiSwiper", {
-  loop:true,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
   navigation: {
     nextEl: ".testi-next-btn",
     prevEl: ".testi-prev-btn",

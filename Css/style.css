@@ -30,7 +30,11 @@ header {
   max-width: 1764px;
   margin: 0 auto;
   width: 100%;
-  /* padding: 0 15px; */
+}
+.big-container {
+  max-width: 1944px;
+  margin: 0 auto;
+  width: 100%;
 }
 a {
   display: inline-block !important;
@@ -82,8 +86,6 @@ body {
   justify-content: end;
   align-items: center;
   padding: 15px 10px !important;
-  /* height: 50px; */
-  /* padding-right: 30px; */
 }
 
 .top-header ul {
@@ -325,11 +327,12 @@ div.modal-content.cart {
   margin-bottom: 40px !important;
 }
 .bnr-btn .primary-btn {
-  padding: 19px 30px;
+  padding: 13px 20px;
   background: var(--primary-color);
   border-radius: 0;
   text-transform: uppercase;
   font-family: var(--font-Manrope);
+  font-weight: 500;
   color: var(--secondary-color);
   box-shadow: var(--commin-shadow);
   transition: 0.5s linear;
@@ -337,14 +340,11 @@ div.modal-content.cart {
 }
 .bnr-btn .primary-btn svg {
   margin-left: 15px;
-  transition: 0.7s linear;
+  /* transition: 0.7s linear; */
 }
 .bnr-btn .primary-btn:hover {
-  background: #f68272;
-  color: var(--secondary-color);
-}
-.bnr-btn .primary-btn:hover svg {
-  transform: translateX(55px) rotate(45deg);
+  background: transparent;
+  border: 2px solid var(--secondary-color);
 }
 .bnr-sec .swiper {
   position: relative;
@@ -397,7 +397,6 @@ div.modal-content.cart {
   transform: scale(1.05);
 }
 .abt-imges .abt-left-img {
-  /* position: relative; */
   z-index: 99;
   margin-bottom: 20px;
   max-width: 349px;
@@ -492,7 +491,7 @@ div.modal-content.cart {
   text-transform: capitalize;
 }
 .abt-cnts .more-btn {
-  padding: 14px 25px;
+  padding: 12px 20px;
   background: var(--primary-color);
   transition: 0.5s linear;
   font-family: var(--font-Manrope);
@@ -504,8 +503,15 @@ div.modal-content.cart {
   margin-left: 5px;
 }
 .more-btn:hover {
-  background: #f68272;
-  color: black;
+  background: transparent;
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.more-btn:hover svg g path {
+  stroke: var(--primary-color);
+}
+.more-btn:hover svg defs {
+  fill: var(--primary-color);
 }
 .after-img {
   position: absolute;
@@ -693,17 +699,15 @@ div.modal-content.cart {
 .therpy-sec {
   padding: 40px 0;
 }
-/* .therpy-sec .container {
-  padding: 0 !important;
-} */
 .therpy-cnt {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 .thrpy-txt {
-  font-size: 65px;
+  font-size: 85px;
   font-family: var(--font-Marcellus);
+  color: rgba(0, 0, 0, 50%);
 }
 .therpy-cnt .thrpy-txt span {
   display: inline-block;
@@ -714,6 +718,44 @@ div.modal-content.cart {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marqueeRev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.therpy-cnt {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.thrpy-top-txt {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+}
+.thrpy-btm-txt {
+  display: inline-block;
+  animation: marqueeRev 15s linear infinite;
+}
+.thrpy-txt:hover {
+  animation-play-state: paused;
+}
+
+.thrpy-txt img {
+  width: 20px;
+  vertical-align: middle;
+  margin: 0 8px;
 }
 /*----------------------- Explore -----------------------*/
 .explr-sec {
@@ -875,10 +917,18 @@ div.modal-content.cart {
 }
 .view-btn svg {
   margin-left: 5px;
+  transition: 0.5s linear;
 }
 .view-btn:hover {
-  color: var(--top-nav-color);
-  background: #f68272;
+  background: transparent;
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.view-btn:hover svg g path {
+  stroke: var(--primary-color);
+}
+.view-btn:hover svg defs {
+  fill: var(--primary-color);
 }
 /*---------------------- Price ----------------------*/
 .price-sec {
@@ -912,9 +962,9 @@ div.modal-content.cart {
   gap: 10px;
   transition: 0.5s linear;
 }
-.membership-card:hover {
+/* .membership-card:hover {
   transform: scale(1.02);
-}
+} */
 .membership-card .card-img {
   /* max-width: 249px; */
   height: 500px;
@@ -946,10 +996,10 @@ div.modal-content.cart {
   letter-spacing: 1.4px;
 }
 .price-btn {
-  margin-top: 66px;
+  margin-top: 116px;
 }
 .price-btn .book-btn {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding: 9px 12px;
   background: var(--primary-color);
   font-family: var(--font-Manrope);
@@ -962,8 +1012,15 @@ div.modal-content.cart {
   margin-left: 5px;
 }
 .price-btn .book-btn:hover {
-  color: var(--top-nav-color);
-  background: #f68272;
+  background: transparent;
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.price-btn .book-btn:hover svg g path {
+  stroke: var(--primary-color);
+}
+.price-btn .book-btn:hover svg defs {
+  fill: var(--primary-color);
 }
 .membership-card.first-card::after {
   content: "$29.00";
@@ -977,6 +1034,42 @@ div.modal-content.cart {
   font-size: 22px;
   color: var(--secondary-color);
   border-radius: 50px;
+  transition: 0.5s linear;
+}
+.membership-card.scnd-card::after {
+  content: "$39.00";
+  position: absolute;
+  width: 229px;
+  height: 41px;
+  background: var(--primary-color);
+  top: 50px;
+  left: 44px;
+  text-align: center;
+  font-size: 22px;
+  color: var(--secondary-color);
+  border-radius: 50px;
+  transition: 0.5s linear;
+}
+.membership-card.third-card::after {
+  content: "$59.00";
+  position: absolute;
+  width: 229px;
+  height: 41px;
+  background: var(--primary-color);
+  top: 50px;
+  left: 44px;
+  text-align: center;
+  font-size: 22px;
+  color: var(--secondary-color);
+  border-radius: 50px;
+  transition: 0.5s linear;
+}
+.membership-card.first-card:hover::after,
+.membership-card.scnd-card:hover::after,
+.membership-card.third-card:hover::after {
+  background: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 /*---------------------- Gallery ---------------*/
 .glry-sec {
@@ -995,6 +1088,7 @@ div.modal-content.cart {
   max-width: 1416px;
   margin: 0 auto;
   z-index: 99;
+  box-shadow: var(--commin-shadow);
 }
 .glry-cards-slider .glry-card {
   max-width: 334px;
@@ -1002,14 +1096,29 @@ div.modal-content.cart {
   padding: 5px;
   box-shadow: var(--commin-shadow);
   transition: 0.5s linear;
-}
-.glry-card:hover {
-  transform: scaleX(1.03);
+  overflow: hidden;
 }
 .glry-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s linear;
+}
+.glry-card:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+.glry-cards-slider .swiper-button-next,
+.glry-cards-slider .swiper-button-prev {
+  color: var(--glry-sec-color);
+  padding: 13px;
+  border-radius: 50%;
+}
+.glry-cards-slider .swiper-button-next {
+  background: rgba(0, 0, 0, 100%);
+}
+.glry-cards-slider .swiper-button-prev {
+  background: rgba(148, 145, 151, 50%);
+  border: 1.5px solid rgba(148, 145, 151, 70%);
 }
 /*----------- Testimonial ---------------*/
 .testi-sec {
@@ -1031,6 +1140,7 @@ div.modal-content.cart {
 }
 .testi-form .testi-left-cnt .title-2 {
   margin-bottom: 35px;
+  font-size: 30px;
 }
 .testi-form {
   border-radius: 20px;
@@ -1104,8 +1214,9 @@ div.modal-content.cart {
   border: none;
 }
 .testi-form .sub-btn:hover {
-  color: var(--top-nav-color);
-  background: #f68272;
+  color: var(--primary-color);
+  background: transparent;
+  outline: 1px solid var(--primary-color);
 }
 .testi-content {
   padding-left: 35px;
@@ -1127,27 +1238,27 @@ div.modal-content.cart {
   color: var(--text-color);
   margin-bottom: 20px;
 }
-/* .testiSwiper {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center;
-} */
 .testiSwiper {
   position: relative;
 }
-/* .testiSwiper .card-btn {
-  position: absolute;
-  bottom: -50px;
-} */
 .testi-card {
   padding: 20px;
   border: 1px solid var(--text-color);
+  margin-bottom: 60px;
 }
 .testi-card .left-prt .profile {
   max-width: 100px;
   margin-right: 11px;
 }
 .testi-card .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testi-card .top-part .right-part {
+  max-width: 60px;
+}
+.testi-card .top-part .right-part img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1177,11 +1288,29 @@ div.modal-content.cart {
   margin-top: 20px;
   color: rgba(255, 255, 255, 80%);
 }
-/* .card-btn {
+.testi-content .card-btn {
   display: flex;
   justify-content: center;
-  align-items: center;
-} */
+  gap: 20px;
+}
+.testi-content .testi-next-btn,
+.testi-content .testi-prev-btn {
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 20px;
+  z-index: 9999;
+}
+.testi-content .testi-prev-btn {
+  color: var(--text-color);
+  border: 1.5px solid var(--text-color);
+  order: 1;
+}
+.testi-content .testi-next-btn {
+  order: 2;
+  color: var(--glry-sec-color);
+  background: var(--primary-color);
+}
 .glow-cards {
   position: absolute;
   bottom: -270px;
@@ -1197,8 +1326,9 @@ div.modal-content.cart {
 .glow-card {
   position: relative;
   background: var(--glry-sec-color);
-  padding: 5px 40px;
+  padding: 5px 40px 0;
   display: flex;
+  overflow: hidden;
 }
 .glow-card.card-1 .left-bg {
   max-width: 165px;
@@ -1227,17 +1357,32 @@ div.modal-content.cart {
   transition: 0.5s linear;
 }
 .glow-card .card-btn .book-btn:hover {
-  color: var(--top-nav-color);
-  background: var(--hover-color);
+  color: var(--primary-color);
+  background: transparent;
+  outline: 1px solid var(--primary-color);
+}
+.glow-card .book-btn svg {
+  transition: 0.5s linear;
+}
+.glow-card .book-btn:hover svg g path {
+  stroke: var(--primary-color);
+}
+.glow-card .book-btn:hover svg defs {
+  fill: var(--primary-color);
 }
 .glow-card .right-img {
   max-width: 247px;
   z-index: 9999;
+  transition: 0.5s linear;
 }
 .glow-card .right-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s linear;
+}
+.glow-card .right-img:hover img {
+  transform: scale(1.05);
 }
 .glow-card.card-2 .left-bg {
   max-width: 220px;
@@ -1259,8 +1404,6 @@ div.modal-content.cart {
 .exp-sec {
   padding: 350px 0 100px;
 }
-/* .exp-sec .exp-cards {
-} */
 .exp-sec .exp-row {
   max-width: 1220px;
   margin: 0 auto;
@@ -1274,8 +1417,36 @@ div.modal-content.cart {
   margin-bottom: 30px;
   transition: 0.5s linear;
 }
-.exp-sec .cards:hover {
+.exp-cards .cards .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(222, 150, 141, 40%),
+    rgba(0, 0, 0, 80%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 20px 10px;
+  opacity: 0;
+  transition: 0.5s linear;
+}
+.exp-cards .cards .overlay .social ul {
+  padding: 0;
+  gap: 30px;
+}
+.exp-sec .cards:hover .overlay {
   transform: scale(1.03);
+  opacity: 1;
+}
+.exp-sec .exp-card-1:hover::after,
+.exp-sec .exp-card-2:hover::after,
+.exp-sec .exp-card-4:hover::after,
+.exp-sec .exp-card-5:hover::after,
+.exp-sec .exp-card-6:hover::after,
+.exp-cards .cards:hover .cnt {
+  display: none;
 }
 .exp-sec .cards .img {
   height: 425px;
@@ -1311,20 +1482,25 @@ div.modal-content.cart {
     rgba(0, 0, 0, 80%)
   );
 }
+.exp-card-3 {
+  border: 1px solid #000;
+  padding: 10px 15px;
+}
 .exp-card-3 .title {
   font-size: 36px;
   letter-spacing: 0.36px;
   font-family: var(--font-Marcellus);
   margin-bottom: 20px;
+  line-height: normal;
 }
 .exp-card-3 p {
   font-size: 18px;
   letter-spacing: 1.8px;
   font-family: var(--font-Manrope);
   color: var(--text-color);
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
-.exp-card-3 .view-btn {
+.exp-card-3 .viw-btn {
   padding: 10px 20px;
   background: var(--primary-color);
   color: var(--secondary-color);
@@ -1332,9 +1508,20 @@ div.modal-content.cart {
   text-transform: uppercase;
   transition: 0.5s linear;
 }
-.exp-card-3 .view-btn:hover {
-  color: var(--top-nav-color);
-  background: var(--hover-color);
+.exp-card-3 .viw-btn:hover {
+  color: var(--primary-color);
+  background: transparent;
+}
+.exp-card-3 .viw-btn:hover {
+  background: transparent;
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.exp-card-3 .viw-btn:hover svg g path {
+  stroke: var(--primary-color);
+}
+.exp-card-3 .viw-btn:hover svg defs {
+  fill: var(--primary-color);
 }
 .exp-sec .cards .cnt {
   position: absolute;
@@ -1348,87 +1535,9 @@ div.modal-content.cart {
   font-size: 16px;
 }
 
-/*-------------------- FAQ -----------------*/
-.faq-sec {
-  padding: 100px 0 200px;
-  background: var(--glry-sec-color);
-  position: relative;
-}
-.faq-sec .faq-row {
-  max-width: 1230px;
-  margin: 0 auto;
-  --bs-gutter-x: 30px;
-}
-.faq-sec .title-2 {
-  font-size: 36px;
-  margin-bottom: 50px;
-}
-.accordion {
-  max-width: 612px;
-}
-.accordion-item {
-  margin-bottom: 20px;
-}
-.accordion .accordion-body {
-  max-width: 460px;
-  height: 138px;
-  font-size: 18px;
-  font-family: var(--font-Manrope);
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: var(--text-color);
-}
-.accordion-button {
-  color: var(--top-nav-color);
-  background: none !important;
-  outline: none !important;
-  font-size: 20px;
-  font-family: var(--font-Marcellus);
-  letter-spacing: 2px;
-}
-.accordion-button.collapsed {
-  color: var(--primary-color);
-}
-.faq-vid {
-  position: relative;
-}
-.faq-vid .play-btn {
-  position: absolute;
-  left: 40%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.faq-vid .down-vid {
-  max-width: 510px;
-  /* height: 510px; */
-}
-.down-vid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.faq-vid .up-img {
-  max-width: 420px;
-  height: 427px;
-  position: absolute;
-  bottom: -230px;
-  left: 160px;
-}
-.up-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.faq-af-img {
-  max-width: 254px;
-  position: absolute;
-  bottom: 47px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 /*---------------- Blog ----------------*/
 .blog-sec {
-  padding: 100px 0;
+  padding-bottom: 100px;
 }
 .blog-cnt .common-title {
   justify-content: center;
@@ -1444,12 +1553,17 @@ div.modal-content.cart {
   position: relative;
 }
 .blog-card .card-img {
+  overflow: hidden;
   max-width: 360px;
 }
 .blog-card .card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s linear;
+}
+.blog-card .card-img img:hover {
+  transform: scale(1.15);
 }
 .blog-card .card-cnt {
   position: absolute;
@@ -1487,16 +1601,18 @@ div.modal-content.cart {
 /*------------------- Img-Slide -----------------*/
 .img-slide-sec {
   padding: 140px 0 100px;
+  overflow: hidden;
 }
 .img-slide-sec .carousel {
   display: flex;
-  /* width: 90%; */
+  gap: 150px;
 }
 .img-slide-sec .group {
   display: flex;
   align-items: center;
-  gap: 70px;
-  animation: spin 5s infinite linear;
+  gap: 170px;
+  flex-shrink: 0;
+  animation: spin 20s infinite linear;
 }
 .img-slide-sec .group .img-card-1 {
   max-width: 125px;
@@ -1513,12 +1629,18 @@ div.modal-content.cart {
 .img-slide-sec .group .img-card-5 {
   max-width: 100px;
 }
+.img-slide-sec img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 @keyframes spin {
-  form {
-    translate: 0;
+  from {
+    transform: translateX(0);
   }
   to {
-    translate: -100%;
+    transform: translateX(-100%);
   }
 }
 /*--------------- Contact ---------------*/
@@ -1605,6 +1727,11 @@ div.modal-content.cart {
   padding: 100px 0;
   background: var(--top-nav-color);
   color: var(--secondary-color);
+}
+.foot-sec .fst-cnt .social ul {
+  padding: 0;
+  display: flex;
+  gap: 17px;
 }
 .foot-sec .scnd-cnt .title,
 .foot-sec .third-cnt .title {
@@ -1730,8 +1857,22 @@ div.modal-content.cart {
     margin-right: 20px !important;
   }
   /*----------- Price -----------*/
-  .membership-card.first-card::after {
-    width: 140px !important;
+  .membership-card.first-card::after,
+  .membership-card.scnd-card::after,
+  .membership-card.third-card::after {
+    width: 140px;
+  }
+  /* ------------Blog--------------------- */
+  .blog-sec {
+    padding-bottom: 20px;
+  }
+  .blog-card .card-cnt {
+    position: relative;
+    bottom: 0;
+  }
+  /* -------------- ImgSlide ---------------- */
+  .img-slide-sec {
+    padding: 90px 0;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1741,18 +1882,76 @@ div.modal-content.cart {
   .nav-btn a:not(:last-child) {
     margin-right: 15px !important;
   }
+  .membership-card.first-card::after,
+  .membership-card.scnd-card::after,
+  .membership-card.third-card::after {
+    width: 220px;
+  }
+  .membership-card .card-cnt {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .membership-card .card-cnt .card-title {
+    margin-bottom: 20px;
+  }
+  .membership-card .price-btn {
+    margin-top: 20px;
+  }
+  /*--------------- Banner --------------*/
   /*----------- Price -----------*/
-  .membership-card.first-card::after {
+  .membership-card {
+    flex-direction: column;
+  }
+  .membership-card .card-img {
+    height: 250px;
+  }
+  .membership-card.third-card .card-cnt .card-title {
+    font-size: 18px;
+  }
+  .membership-card.first-card::after,
+  .membership-card.scnd-card::after,
+  .membership-card.third-card::after {
     width: 80px !important;
     font-size: 18px;
     padding-top: 5px;
+  }
+  /* ------------Testimonial--------------- */
+  .testi-form {
+    padding: 30px 20px;
+  }
+  .testi-form form .form-row .group-1 input,
+  .testi-form form .form-row .group-2 input,
+  .testi-form form .form-row .group-3 input,
+  .testi-form form .form-row .group-4 input {
+    padding: 14px 10px;
+    font-size: 14px;
+  }
+  .testi-card {
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+  .testi-card .left-prt .cnt p {
+    margin-bottom: 0;
+  }
+  /* ------------Blog--------------------- */
+  .blog-card .card-cnt {
+    position: relative;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 992px) {
   .title-1 {
     font-size: 55px;
   }
-
+  .treat-sec {
+    padding: 80px 0 60px;
+  }
+  .testi-sec {
+    padding-bottom: 40px;
+  }
+  .exp-sec {
+    padding: 70px 0;
+  }
   /*--------------------- Navabr -----------------*/
   .top-header {
     padding: 10px !important;
@@ -1760,16 +1959,18 @@ div.modal-content.cart {
   }
 
   .top-header ul {
+    align-items: center;
     justify-content: center;
     /* flex-direction: column; */
     gap: 10px;
   }
   .offcanvas {
     flex-direction: column !important;
-    padding-top: 166px !important;
+    padding-top: 100px !important;
     background: rgba(128, 128, 128, 0.396) !important;
     backdrop-filter: blur(20px) !important;
     transition: 0.5s linear !important;
+    /* width: 40% !important; */
   }
   .nav-item {
     margin-bottom: 20px !important;
@@ -1831,6 +2032,10 @@ div.modal-content.cart {
   .navbar-toggler.activeshow::before {
     transform: rotate(-45deg) translateX(11.5px);
   }
+  /*--------------- Banner -------------*/
+  .bnr-btn .primary-btn {
+    padding: 14px 24px;
+  }
   /*--------------- About --------------*/
   .abt-sec .abt-row {
     --bs-gutter-x: 65px !important;
@@ -1841,7 +2046,7 @@ div.modal-content.cart {
     justify-content: center;
   }
   .abt-sec .abt-row {
-    text-align: center; /* 🔥 main fix */
+    text-align: center;
   }
 
   .abt-cnts {
@@ -1857,6 +2062,9 @@ div.modal-content.cart {
   .abt-clint-sol {
     justify-content: center !important;
     gap: 20px;
+  }
+  .more-btn {
+    padding: 12px 20px !important;
   }
   /*-------------------- Treatment --------------------*/
   .time-box-row div .time-card::after {
@@ -1938,11 +2146,16 @@ div.modal-content.cart {
     text-align: center;
   }
   /*----------------- Price ----------------*/
+  .membership-card {
+    margin-bottom: 20px;
+  }
   .membership-card .card-img {
     width: 100%;
-    height: 500px;
+    height: 400px;
   }
-  .membership-card.first-card::after {
+  .membership-card.first-card::after,
+  .membership-card.scnd-card::after,
+  .membership-card.third-card::after {
     width: 229px !important;
   }
   /*------------------- Testimonial --------------*/
@@ -1963,24 +2176,87 @@ div.modal-content.cart {
   .testi-form .form-group label {
     margin-right: 10px;
   }
+  .glow-cards {
+    position: relative;
+    bottom: 0;
+  }
+  .glow-card {
+    display: flex;
+    justify-content: space-between;
+    height: 270px;
+  }
+  .glow-card .card-cnt .card-btn .book-btn {
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+  .testi-sec .left-af-img {
+    display: none;
+  }
+  .testi-sec .right-af-img {
+    display: none;
+  }
+  /* ------------Blog--------------------- */
+  .blog-card {
+    margin-bottom: 20px;
+  }
+  .blog-card .card-cnt {
+    max-width: 350px;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .title-1 {
-    font-size: 40px;
-  }
-  .title-2 {
     font-size: 35px;
   }
-
-  /*--------------------- Navabr -----------------*/
-  .offcanvas {
-    padding-top: 240px !important;
-    width: 60% !important;
+  .title-2 {
+    font-size: 30px;
   }
-  /*---------- about -----------*/
+  .nav-logo .navbar-brand {
+    max-width: 120px !important;
+  }
+  .bnr-sec {
+    padding: 200px 0 70px;
+  }
   .abt-sec {
+    padding: 70px 0;
+  }
+  .treat-sec {
+    padding: 60px 0 84px;
+  }
+  .else-sec {
+    padding: 70px 0 60px;
+  }
+  .serv-sec {
+    padding: 60px 0;
+  }
+  .treat-sec {
+    padding: 70px 0 0;
+  }
+  .price-sec {
+    padding: 60px 0;
+  }
+  .testi-sec {
+    padding: 70px 0;
+  }
+  .img-slide-sec {
     padding: 50px 0;
   }
+  /*--------------------- Navabr -----------------*/
+  .offcanvas {
+    width: 70% !important;
+  }
+  .nav-item {
+    margin-bottom: 10px;
+  }
+  .nav-link {
+    padding: 0;
+  }
+  /*---------- Banner --------*/
+  .bnr-btn .primary-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  /*---------- about -----------*/
   .abt-imges {
     display: flex;
     flex-direction: column;
@@ -2067,15 +2343,109 @@ div.modal-content.cart {
   /* .easy-last-card {
     justify-content: center;
   } */
+  /*----------------- Price ----------------*/
+  .membership-card {
+    padding: 20px;
+  }
+  .membership-card .card-img {
+    width: 100%;
+    height: 250px;
+  }
+  .membership-card.first-card::after,
+  .membership-card.scnd-card::after,
+  .membership-card.third-card::after {
+    width: 89px !important;
+  }
+  /* ------------Testimonial---------------- */
+  .glow-card {
+    padding: 5px 15px 0;
+  }
+  /* -------------Exoerience-------------- */
+  .exp-cards {
+    justify-content: center;
+  }
+  .exp-cards .cards {
+    margin: 0 auto 20px;
+  }
+  .exp-cards .cards.exp-card-3 .title {
+    font-size: 28px;
+  }
+  .exp-cards .cards.exp-card-3 p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .exp-card-3 .viw-btn {
+    padding: 7px 14px;
+  }
 }
 @media screen and (max-width: 576px) {
+  .title-1 {
+    font-size: 30px;
+  }
+  .title-2 {
+    font-size: 20px;
+  }
+  .bnr-sec {
+    padding: 200px 0 40px;
+  }
+  .abt-sec {
+    padding: 50px 0;
+  }
+  .treat-sec {
+    padding: 40px 0 0;
+  }
+  .else-sec {
+    padding: 60px 0 40px;
+  }
+  .serv-sec {
+    padding: 40px 0;
+  }
+  .treat-sec {
+    padding: 50px 0 0;
+  }
+  .price-sec {
+    padding: 40px 0;
+  }
+  .testi-sec {
+    padding: 50px 0;
+  }
+  .easy-sec {
+    padding: 50px 5px;
+  }
+  .explr-sec {
+    padding: 50px 0;
+  }
+  /*----------- Top header --------------*/
+  .top-header a svg {
+    margin-right: 10px !important;
+  }
+  .top-header li a .tp-svg-1 {
+    width: 13px !important;
+    height: 13px !important;
+  }
+  .top-header li a .svg-2 {
+    width: 14px !important;
+    height: 16px !important;
+  }
+  .top-header ul {
+    /* gap: 20px; */
+  }
+  .top-header a span {
+    font-size: 14px !important;
+  }
   /*--------------------- Navabr -----------------*/
   .offcanvas {
-    width: 80% !important;
+    width: 80%;
   }
   /*----------------Banner-----------*/
-  .mySwiper .swiper-pagination {
-    display: none;
+  .bnr-btn {
+    margin-bottom: 30px;
+  }
+  .bnr-cnt p {
+    margin-bottom: 20px !important;
+  }
+  .bnr-btn {
+    margin-bottom: 20px;
   }
   /*------------------ Else ---------------*/
   .else-vid .play-btn {
@@ -2083,10 +2453,10 @@ div.modal-content.cart {
     transform: translateY(-50%);
   }
   /*----------- Price -----------*/
-  .membership-card.first-card::after {
-    width: 90px !important;
-    font-size: 18px;
-    padding-top: 5px;
+  .membership-card.first-card::after,
+  .membership-card.scnd-card::after,
+  .membership-card.third-card::after {
+    width: 90px;
   }
   /*---------- Gallery ------*/
   .glry-cards-slider {
@@ -2106,10 +2476,38 @@ div.modal-content.cart {
   .glry-cards-slider .swiper-slide {
     margin-right: 0 !important;
   }
+  /* ----------------Testimonial----------------- */
+  .glow-card.card-1 {
+    margin-bottom: 20px;
+  }
+  .testi-card {
+    height: 310px;
+  }
+  /* ------------Blog--------------------- */
+  .blog-row {
+    justify-content: center;
+  }
+  .blog-row .card {
+    margin: 0 auto 20px;
+  }
 }
 @media screen and (max-width: 418px) {
+  /* ---------------Navbar------------- */
+  .offcanvas {
+    width: 100%;
+  }
+  /* ---------------Esay------------ */
   .else-vid .play-btn {
     top: 70% !important;
+  }
+  /* ------------------price-------------- */
+  .membership-card .card-img {
+    width: 100%;
+    height: 200px;
+  }
+  /* -------------Testimonial------------- */
+  .testi-card .btm-prt p {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 375px) {
